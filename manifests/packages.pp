@@ -1,10 +1,11 @@
 class puppet::packages {
-	package { "puppet":
-		ensure => installed,
+	package {
+		'puppet':;
 	}
 
-	service { "puppet":
-		ensure => stopped,
-		enable => false,
+	service {
+		'puppet':
+			ensure => stopped,
+			enable => false;
 	}
 }
