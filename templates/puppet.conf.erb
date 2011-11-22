@@ -24,4 +24,4 @@
     # The default value is '$confdir/localconfig'.
     localconfig = $vardir/localconfig
 
-    server = zetsubou
+    server = <%= scope.lookupvar('puppet::server') %>

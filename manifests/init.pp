@@ -1,6 +1,8 @@
 include *.pp
 
-class puppet {
+class puppet (
+  $server = 'puppet'
+){
   class {
     'puppet::packages":;
     'puppet::user':
