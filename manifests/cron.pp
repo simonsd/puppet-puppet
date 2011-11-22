@@ -4,6 +4,6 @@ class puppet::cron {
 			ensure => present,
 			user => root,
 			minute => '*/5',
-			command => '/usr/sbin/puppet agent --test';
+			command => '/usr/bin/puppet agent --test';
 	}
 }
