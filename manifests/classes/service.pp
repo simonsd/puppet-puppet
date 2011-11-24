@@ -2,6 +2,10 @@ class puppet::service {
 	service {
 		'puppet':
 			ensure => stopped,
-			enable => false;
+			enable => false,
+			path => $::operatingsystem ? {
+				default => undef,
+				archlinux => '/etc/rc.d',
+			};
 	}
 }
