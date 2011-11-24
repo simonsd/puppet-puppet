@@ -1,14 +1,14 @@
 class puppet::packages {
-	@package {
-		'puppet':;
-	}
+  @package {
+    'puppet':;
+  }
 
-	@yaourt::pkg {
-		'puppet':;
-	}
+  @yaourt::pkg {
+    'puppet':;
+  }
 
-	case $::operatingsystem {
-		default:   { realize(Package['puppet']) }
-		archlinux: { realize(Yaourt::Pkg['puppet']) }
-	}
+  case $::operatingsystem {
+    default:   { realize(Package['puppet']) }
+    archlinux: { realize(Yaourt::Pkg['puppet']) }
+  }
 }
