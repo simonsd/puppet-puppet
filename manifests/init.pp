@@ -1,4 +1,4 @@
-include *.pp
+import 'classes/*.pp'
 
 class puppet (
   $server = 'puppet'
