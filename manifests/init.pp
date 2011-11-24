@@ -4,12 +4,12 @@ class puppet (
   $server = 'puppet'
 ){
   class {
-    'puppet::packages":;
+    'puppet::packages':;
     'puppet::user':
       require => Class['puppet::packages'];
-    'puppet::config":
+    'puppet::config':
       require => Class['puppet::user'];
-    'puppet::cron":
+    'puppet::cron':
       require => Class['puppet::config'];
   }
 }
