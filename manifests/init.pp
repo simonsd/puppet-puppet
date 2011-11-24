@@ -9,7 +9,9 @@ class puppet (
       require => Class['puppet::packages'];
     'puppet::config':
       require => Class['puppet::user'];
-    'puppet::cron':
+    'puppet::service':
       require => Class['puppet::config'];
+    'puppet::cron':
+      require => Class['puppet::service'];
   }
 }
