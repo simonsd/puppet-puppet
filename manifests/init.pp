@@ -4,6 +4,7 @@ class puppet (
   $server = 'puppet'
 ){
   class {
+    'concat::setup':;
     'puppet::packages':;
     'puppet::user':
       require => Class['puppet::packages'];
